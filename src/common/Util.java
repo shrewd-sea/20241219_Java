@@ -5,4 +5,9 @@ public class Util {
     System.out.println(obj.getClass().getSimpleName());
 
   }
+
+  public static int rand(int seed) {
+    return (int) (Math.random()* seed); }
+
 }
+
