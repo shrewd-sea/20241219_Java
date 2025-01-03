@@ -22,6 +22,7 @@ public class Main {
     Ex11Modifier ex = new Ex11Modifier();
     ex.publicVar = 100;
     ex.publicMethod();
+    123;
   }
 }
 class ExTemp extends Ex11Modifier {}
