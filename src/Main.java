@@ -1,5 +1,7 @@
 // class 밖으로 멤버변수와 메서드를 절대 선언할 수 없다.
 
+import p04class.Ex11Modifier;
+
 class Foo {
   String name;
 
@@ -17,5 +19,9 @@ public class Main {
     Foo foo = new Foo();
     foo.name = "곰돌이";
     foo.sleep();
+    Ex11Modifier ex = new Ex11Modifier();
+    ex.publicVar = 100;
+    ex.publicMethod();
   }
 }
+class ExTemp extends Ex11Modifier {}

@@ -35,6 +35,7 @@ public class Ex02ArrayShuffleSort {
       if (l != 0)
         System.out.print(", ");
       System.out.println(Arrays.toString(lotto));
+
     }
 
     // 정렬
