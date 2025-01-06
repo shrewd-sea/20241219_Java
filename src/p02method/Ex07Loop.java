@@ -3,6 +3,9 @@ package p02method;
 import common.Util;
 
 import javax.swing.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 import java.util.Scanner;
 
 public class Ex07Loop {
@@ -69,5 +72,40 @@ public class Ex07Loop {
       }
     }
     System.out.println("게임을 종료합니다.");
-  }
-}
+
+    //무한 반복
+      int[] lotto = new int[6];
+      List<Integer> lottoList = new ArrayList<>();
+      int idx = 0;
+    for(;;) {
+      int ball = (int) (Math.random() * 45) + 1;
+      boolean check = false;
+      // 배열 반복문
+      for (int i = 0; i < lotto.length; i++) {
+        if (ball == lotto[i]) {
+          check = true;
+          break;
+        }
+      }
+      // List 반복문
+      for (int i = 0; i < lottoList.size(); i++) {
+        if (ball == lottoList.get(i)) {
+          check = true;
+          break;
+        }
+      }
+      // 중복이 없을 경우 추가하는 구문
+      if (!check) {
+        // 배열 처리
+        lotto[idx++] = ball;
+        // List 처리
+        lottoList.add(ball);
+
+        idx++;
+        if (idx == 6) break;
+      }
+    }
+    System.out.println(Arrays.toString(lotto));
+    System.out.println(lottoList);
+      }
+    }
