@@ -29,13 +29,10 @@ public class Ex05Set {
     }
     Set<Integer> lotto = new HashSet<>();
     while(lotto.size()<6){
-//    for (int i = 0; lotto.size() < 6; i++) {
+//    for (; lotto.size() < 6;) {
       lotto.add((int)(Math.random() * 45) + 1);
     }
     System.out.println(lotto);
-//    while(true){  무한반복
-      for(;;){
-    }
   }
 }
 

@@ -33,6 +33,15 @@ public class Ex01ArrayList {
     while (it.hasNext()){
       System.out.println(it.next());
     }
+
+    List<Integer> lotto = new ArrayList<>();
+    while (lotto.size() < 6) {
+      int ball = (int)(Math.random() * 45) + 1;
+      if (lotto.contains(ball)) continue;
+
+      lotto.add(ball);
+    }
+    System.out.println(lotto);
   }
 }
 
