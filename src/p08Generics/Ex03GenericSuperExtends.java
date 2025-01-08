@@ -6,13 +6,13 @@ public class Ex03GenericSuperExtends {
     Gen2 gen2 = new Gen2();
     Gen3 gen3 = new Gen3();
 
-    //++++++++ <? super type>또는 <? extends type>은 매개변수의 타입을 제약하는데 목적이 있음.
-    //<? super Gen2>의 의미는 매개변수의 타입이 Gen2의 조상인 Gen1을 조상으로 할수 있는 타입을 허용(Gen1 포함)
-    //super는 ?의 조상을 둔 하위 객체는 모두 포함이 되기 때문에 사실상 제약의 의미가 없다.
-    GenType<? super Gen2> genType = new GenType<>(gen1);
+// <? super type>또는 <? extends type>은 매개변수의 타입을 제약하는 목적.
+// <? super Gen2>는 매개변수의 타입이 Gen2의 조상인 Gen1을 조상으로 할수 있는 타입을 허용(Gen1 포함)
+// super는 ?의 조상을 둔 하위 객체는 모두 포함이 되기 때문에 사실상 제약의 의미가 없다.
+    GenType<? super Gen2> genType = new GenType<>(gen3);
 //    Gen3 t3 = (Gen3) genType.get(); //단순한 형변환의 문제
-//    Gen2 t2 = (Gen2) genType.get(); //단순한 형변환의 문제
-    Gen1 t1 = (Gen1) genType.get(); //단순한 형변환의 문제
+    Gen2 t2 = (Gen2) genType.get(); //단순한 형변환의 문제
+    Gen1 t1 = (Gen1) genType.get();
     Object t4 = genType.get();
 //    System.out.println(t3.name);
 //    System.out.println(t3.getName());
